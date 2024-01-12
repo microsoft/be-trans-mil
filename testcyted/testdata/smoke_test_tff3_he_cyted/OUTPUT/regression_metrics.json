@@ -1,0 +1,6 @@
+{
+    "train/loss_epoch": 0.7662604451179504,
+    "val/loss_epoch": 0.5256124138832092,
+    "extra_val/loss_epoch": 0.7966507077217102,
+    "test/loss_epoch": 1.4535585641860962
+}

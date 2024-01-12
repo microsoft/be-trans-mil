@@ -1,0 +1,3 @@
+[submodule "hi-ml"]
+	path = hi-ml
+	url = https://github.com/microsoft/hi-ml
