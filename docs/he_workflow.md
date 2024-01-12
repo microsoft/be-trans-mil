@@ -140,26 +140,9 @@ Here are a few particularly helpful ones:
 
 # Reproducing Barrett's MIL best benchmark
 
-The table below summarizes the expected results for the best benchmarked model using [1st fold](<https://ml.azure.com/experiments/id/e243f88b-e677-4fc5-bbff-f09d433ccf9a/runs/HD_81ad64b5-e03a-4373-9387-235a224314c8_1?wsid=/subscriptions/db9fc1d1-b44e-45a8-902d-8c766c255568/resourcegroups/innereyerg/workspaces/innereye4ws&tid=72f988bf-86f1-41af-91ab-2d7cd011db47#metrics>)
-split of a 5-fold cross validation run.
-
-| Model Description |                                      |                   |                     | Metrics   |        |             |        |
-| ----------------- | ------------------------------------ | ----------------- | ------------------- | --------- | ------ | ----------- | ------ |
-| Encoder           | Pooling                              | Bag size training | Bag size validation | Accuracy  | Auroc  | Specificity | Recall |
-| Resnet 50         | 4 Transformer layers + Attention MIL | 2500              | 5000                | V: 0.9071 | 0.9360 | 0.9823      | 0.7857 |
-|                   |                                      |                   |                     | T: 0.8733 | 0.8549 | 0.9366      | 0.7701 |
-
-Bag size stands for the number of tiles sampled from the slide on the fly.
-
-V: stands for validation results and T: test performance
-
-All settings have been adjusted for Resnet50 in `cyted.TFF3_HECytedMIL_Resnet50` container config to reproduce the results above. Simply run the following commandline:
-
 ```shell
 python runner.py --model=cyted.TFF3_HECytedMIL_Resnet50 --cluster=<mygpucluster> --mount_in_azureml --model_variant=cyted --strictly_aml_v1 --docker_shm_size=900g
 ```
-
-You can learn more about the model architecture and technical details in the sections below.
 
 ## Model description
 
