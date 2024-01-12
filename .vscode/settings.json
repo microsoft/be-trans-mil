@@ -1,0 +1,83 @@
+{
+  "autoDocstring.docstringFormat": "sphinx-notypes",
+  "fileHeaderComment.parameter": {
+    "*": {
+      "line": "-------------------------------------------------------------------------------------------",
+      "commentprefix": "#",
+      "company": "Microsoft Corporation"
+    }
+  },
+  "fileHeaderComment.template": {
+    "*": [
+      "${commentprefix}  ${line}",
+      "${commentprefix}  Copyright (c) ${company}. All rights reserved.",
+      "${commentprefix}  Licensed under the MIT License (MIT). See LICENSE in the repo root for license information.",
+      "${commentprefix}  ${line}",
+      "",
+    ]
+  },
+  "files.trimTrailingWhitespace": true,
+  "files.insertFinalNewline": true,
+  "files.trimFinalNewlines": true,
+  "files.watcherExclude": {
+    "**/.git/objects/**": true,
+    "**/.git/subtree-cache/**": true,
+    "**/.mypy_cache/**": true,
+    "**/.pytest_cache/**": true
+  },
+  "python.analysis.extraPaths": [
+    "./hi-ml/hi-ml/src",
+    "./hi-ml/hi-ml-azure/src",
+    "./hi-ml/hi-ml-cpath/src",
+    "./hi-ml/hi-ml-azure/testazure",
+    "./hi-ml/hi-ml-cpath/testhisto"
+  ],
+  "python.autoComplete.extraPaths": [
+    "./hi-ml/hi-ml/src",
+    "./hi-ml/hi-ml-azure/src",
+    "./hi-ml/hi-ml-cpath/src",
+  ],
+  "python.testing.pytestArgs": [
+    "testcyted",
+  ],
+  "python.testing.unittestEnabled": false,
+  "python.testing.pytestEnabled": true,
+  "terminal.integrated.defaultProfile.windows": "Command Prompt",
+  "terminal.integrated.env.windows": {
+    "PYTHONPATH": "${workspaceFolder};${workspaceFolder}/hi-ml/hi-ml/src;${workspaceFolder}/hi-ml/hi-ml-azure/src;${workspaceFolder}/hi-ml/hi-ml-cpath/src"
+  },
+  "terminal.integrated.env.linux": {
+    "PYTHONPATH": "${workspaceFolder}:${workspaceFolder}/hi-ml/hi-ml/src:${workspaceFolder}/hi-ml/hi-ml-azure/src:${workspaceFolder}/hi-ml/hi-ml-cpath/src"
+  },
+  "python.linting.pylintEnabled": false,
+  "python.linting.flake8Enabled": true,
+  "python.linting.flake8Args": [
+    "--config=${workspaceFolder}/hi-ml/hi-ml-cpath/.flake8",
+  ],
+  "python.linting.mypyEnabled": true,
+  "python.linting.pycodestyleEnabled": false,
+  "python.linting.pycodestyleArgs": [
+    "--max-line-length=120",
+    "--show-source",
+    "--show-pep8"
+  ],
+  "python.formatting.provider": "black",
+  "rewrap.autoWrap.enabled": true,
+  "rewrap.wrappingColumn": 120,
+  "[python]": {
+    "editor.rulers": [
+      120
+    ],
+    "editor.defaultFormatter": "ms-python.black-formatter",
+    "editor.formatOnSave": true,
+  },
+  "isort.args": [
+    "-l=120",
+    "--src=${workspaceFolder}",
+  ],
+  "workbench.colorCustomizations": {
+    "activityBar.background": "#153233",
+    "titleBar.activeBackground": "#3f6520",
+    "titleBar.activeForeground": "#F5FBFB",
+  },
+}

@@ -1,14 +1,59 @@
-# Project
+# Code to accompany the paper "Enabling large-scale screening of Barrett's esophagus using weakly supervised deep learning in histopathology"
 
-> This repo has been populated by an initial template to help get you started. Please
-> make sure to update the content to build a great experience for community-building.
+This repository contains the code to accompany the paper "Enabling large-scale screening of Barrett's esophagus using
+weakly supervised deep learning in histopathology".
+The work arose from a collaboration between [Cyted](https://www.cyted.ai/) and [Microsoft Health Futures](https://www.microsoft.com/en-us/research/lab/microsoft-health-futures/).
 
-As the maintainer of this project, please make a few updates:
+The repository contains:
 
-- Improving this README.MD file to provide a great experience
-- Updating SUPPORT.MD with content about this project's support experience
-- Understanding the security reporting process in SECURITY.MD
-- Remove this section from the README
+* Code and instructions to pre-process the data from Cyted
+* Instructions to train a model using the [hi-ml](https://github.com/microsoft/hi-ml) toolbox
+* Code and instructions to analyse the results of the trained model
+
+The code is not intended to be a general-purpose
+library, but rather a record of the code that was used for the paper. Consequently, the code and editor setup
+at many places contains hard-coded paths and other parameters that are specific to the paper and/or the Azure
+setup that our team used, like the names of the AzureML compute clusters, dataset folder, AzureML run IDs, checkpoint
+names, and others.
+
+## Getting Started
+
+We recommend using VSCode for development. You can install VSCode from https://code.visualstudio.com/.
+
+You can clone repository right from within VSCode by selecting "Git: Clone" from the command palette. This will also
+handle the authentication for you.
+
+After cloning the repository, you will need to ensure that the `hi-ml` package is correctly available as a submodule, by running:
+
+```shell
+git submodule init
+git submodule update
+```
+
+Then create a Conda environment `HimlHisto` by running:
+
+```bash
+make env
+```
+
+You can then activate the environment via `conda activate HimlHisto`.
+Set VSCode to use this Conda environment, by choosing "Python: Select Interpreter" from the command palette.
+
+## Workflow for model building and evaluation
+
+* [Azure setup](docs/azure_setup.md)
+* [Quality control](docs/quality_control.md)
+* [Building a model for H&E slides](docs/he_workflow.md)
+* [Building a model for TFF3 slides](docs/tff3_workflow.md)
+* [Evaluating a trained model on a holdout dataset](docs/external_validation.md)
+
+## Data files
+
+The code relies on data files that we are not able to share here in this repository:
+
+- A file that contains bounding boxes of control tissue on TFF3 slides
+  (`tff3_control_tissue_exclusion_via_aml_labelling`). This file was created by running an AzureML labelling project to
+  identify control.
 
 ## Contributing
 
@@ -26,8 +71,8 @@ contact [opencode@microsoft.com](mailto:opencode@microsoft.com) with any additio
 
 ## Trademarks
 
-This project may contain trademarks or logos for projects, products, or services. Authorized use of Microsoft 
-trademarks or logos is subject to and must follow 
+This project may contain trademarks or logos for projects, products, or services. Authorized use of Microsoft
+trademarks or logos is subject to and must follow
 [Microsoft's Trademark & Brand Guidelines](https://www.microsoft.com/en-us/legal/intellectualproperty/trademarks/usage/general).
 Use of Microsoft trademarks or logos in modified versions of this project must not cause confusion or imply Microsoft sponsorship.
 Any use of third-party trademarks or logos are subject to those third-party's policies.

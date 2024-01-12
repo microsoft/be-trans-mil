@@ -1,0 +1,6 @@
+[flake8]
+extend-ignore = E226, E302, E41, W391, E701, W291, E722, W503, E128, E126, E127, E731, E401, E402
+max-line-length = 120
+max-complexity = 25
+# we don't want to double-check flake8 on the repo because that's already taken care of by hi-ml release process
+exclude=hi-ml/
