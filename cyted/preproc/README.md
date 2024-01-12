@@ -14,7 +14,7 @@ The modified data files will be written back to the storage container.
 
 ## Data Conversion from NDPI to TIFF
 
-The script `convert_cyted_ndpi_to_tiff.py` allows to convert cyted whole slides, originally in ndpi format, to tiff files. Use the following commandline to launch the data conversion:
+The script `cyted/preproc/convert_cyted_ndpi_to_tiff.py` allows to convert cyted whole slides, originally in ndpi format, to tiff files. Use the following commandline to launch the data conversion:
 
 ```bash
 cd cyted/preproc
