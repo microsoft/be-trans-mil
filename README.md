@@ -57,7 +57,7 @@ The code relies on data files that we are not able to share here in this reposit
 
 - A file that contains bounding boxes of control tissue on TFF3 slides
   (`tff3_control_tissue_exclusion_via_aml_labelling`). This file was created by running an AzureML labelling project to
-  identify control.
+  identify control tissue in the IHC slides.
 
 ## Contributing
 
