@@ -16,8 +16,6 @@ Bag size stands for the number of tiles sampled from the slide on the fly.
 
 V: stands for cross validation results, T: average test performance and E: ensembled test results across all folds using a majority vote.
 
-TODO: Update table results with final values
-
 # TFF3 Data preprocessing
 
 First, make sure you have followed Azure instructions in `docs/workflow.md`
