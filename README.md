@@ -16,6 +16,10 @@ at many places contains hard-coded paths and other parameters that are specific 
 setup that our team used, like the names of the AzureML compute clusters, dataset folder, AzureML run IDs, checkpoint
 names, and others.
 
+## Disclaimer
+
+The software described in this repository is provided for research and development use only. The software is not intended for use in clinical decision-making or for any other clinical use, and the performance of model for clinical use has not been established. You bear sole responsibility for any use of this software, including incorporation into any product intended for clinical use.
+
 ## Getting Started
 
 We recommend using VSCode for development. You can install VSCode from https://code.visualstudio.com/.
