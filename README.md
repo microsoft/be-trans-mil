@@ -2,7 +2,10 @@
 
 This repository contains the code to accompany the paper ["Enabling large-scale screening of Barrett's esophagus using
 weakly supervised deep learning in histopathology"](https://www.medrxiv.org/content/10.1101/2023.08.21.23294360v1)
-The work arose from a collaboration between [Cyted](https://www.cyted.ai/) and [Microsoft Health Futures](https://www.microsoft.com/en-us/research/lab/microsoft-health-futures/).
+The work arose from a collaboration between [Cyted](https://www.cyted.ai/) and [Microsoft Health
+Futures](https://www.microsoft.com/en-us/research/lab/microsoft-health-futures/).
+
+![Model overview](docs/images/method_overview.jpg)
 
 The repository contains:
 
