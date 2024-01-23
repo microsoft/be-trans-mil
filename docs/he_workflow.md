@@ -150,7 +150,7 @@ An image encoder is used to extract tile level feature maps. The tile embeddings
 to predict the label of the WSI. For our model architectures, we experimented with three encoders (ResNet18, ResNet50,
 SwinTransformer Tiny) followed by the transformer pooling layer, which is inspired by the model architecture
 TransformerMIL in (Myronenko et al. 2021). The figure below outlines the model architecture.
-![model overview](images/method_overview.png)
+![model overview](images/method_overview.jpg)
 
 ## Technical details
 
