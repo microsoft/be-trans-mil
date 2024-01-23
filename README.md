@@ -1,4 +1,4 @@
-# Code to accompany the paper "Enabling large-scale screening of Barrett's esophagus using weakly supervised deep learning in histopathology"
+# Enabling large-scale screening of Barrett's esophagus using weakly supervised learning
 
 This repository contains the code to accompany the paper ["Enabling large-scale screening of Barrett's esophagus using
 weakly supervised deep learning in histopathology"](https://www.medrxiv.org/content/10.1101/2023.08.21.23294360v1)
